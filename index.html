@@ -1,0 +1,138 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <nav id="navbar">
+                <li><a href="#welcome-section">Home</a></li>
+                <li><a href="#projects-wrap">Projects</a></li>
+                <li><a href="#contact-us-wrap">Contact</a></li>
+                <li><a href="#"><code>About</code></a></li>
+            </nav>
+        </header>
+        <section id="welcome-section">
+            <h1></h1>
+
+        </section>
+        <section id="projects-wrap">
+            <h2>Here are few of my web projects</h2>
+            <div id="projects">
+                <a href="https://mjk-weather-app.netlify.app/">
+                    <div class="project-tile">
+                        <img class="proj-img" src="/images/WeatherApp.JPG" />
+                        <h3 class="project-title">Weather App</h3>
+                        <p>Weather app that utilizes OpenWeatherMap API and Promises.<br>Background changes according to
+                            weather condition</p>
+                    </div>
+                </a>
+                <a href="https://web-scrapper-app-pupeteer.herokuapp.com/">
+                    <div class="project-tile">
+                        <img class="proj-img" src="/images/WebScrapper.JPG" />
+                        <h3 class="project-title">Web Scrapper</h3>
+                        <p>This is a web scrapper, It scrap top Q&A from google first page according to your search</p>
+                    </div>
+                </a>
+                <a href="https://reactjs-food-app.netlify.app/">
+                    <div class="project-tile">
+                        <img class="proj-img" src="/images/FoodApp.JPG" />
+                        <h3 class="project-title">FoodApp</h3>
+                        <p>Simple FoodApp in react.js</p>
+                    </div>
+                </a>                
+                <a href="https://reactjss-todo-app.netlify.app/">
+                    <div class="project-tile">
+                        <img class="proj-img" src="/images/ToDoReact.JPG" />
+                        <h3 class="project-title">Todo React App</h3>
+                        <p>todo react app that supports CRUD operations</p>
+                    </div>
+                </a>
+                 <a href="https://movie-search-appp.netlify.app/">
+                    <div class="project-tile">
+                        <img class="proj-img" src="/images/movieSearch.JPG" />
+                        <h3 class="project-title">Movie Search</h3>
+                        <p>Search Movies by title and show all the details and gives the link to IMDB</p>
+                    </div>
+                </a> 
+                <a href="https://ui-site.netlify.app/">
+                    <div class="project-tile">
+                        <img class="proj-img" src="/images/UI-Page.JPG" />
+                        <h3 class="project-title">UI Page</h3>
+                        <p>UI-Page in HTML CSS</p>
+                    </div>
+                </a> 
+                <a href="https://mjk-bmi-calculator.netlify.app/">
+                    <div class="project-tile">
+                        <img class="proj-img" src="/images/BMI_Calculator.JPG" />
+                        <h3 class="project-title">BMI Calculator</h3>
+                        <p>BMI calculator in reactjs</p>
+                    </div>
+                </a>                
+                <a href="https://mjk-timer.netlify.app/">
+                    <div class="project-tile">
+                        <img class="proj-img" src="/images/Timer.JPG" />
+                        <h3 class="project-title">Timer</h3>
+                        <p>Timer website to set pre-defined or custom timer</p>
+                    </div>
+                </a>
+                <a href="https://blop-react-app.netlify.app/">
+                    <div class="project-tile">
+                        <img class="proj-img" src="/images/BlogApp.JPG" />
+                        <h3 class="project-title">Blog App in React</h3>
+                        <p>Blog app created with react (Support CRUD OPERATION)</p>
+                    </div>
+                </a>
+                
+            </div>
+        </section>
+
+        <section id="contact-us-wrap">
+            <h2>Contact Me</h2>
+            <div id="contact-us">
+                <a href="https://github.com/M-Jamal-K/" target="_blank" class="contact-link">
+                    <i class="fa fa-github fa-3x"></i><br>
+                    Github
+                </a>
+                <a href="https://www.facebook.com/muhammadjamal.khan.5015" target="_blank" class="contact-link">
+                    <i class="fa fa-facebook fa-3x"></i><br>
+                    Facebook
+                </a>
+                <a href="#" class="contact-link">
+                    <i class="fa fa-whatsapp fa-3x"></i><br>
+                    03341818243
+                </a>
+                <a href="https://www.Linkedin.com/in/muhammad-jamal-khan" class="contact-link">
+                    <i class="fa fa-linkedin fa-3x"></i><br>
+                    Linkedin
+                </a>
+            </div>
+
+        </section>
+    </main>
+    
+<script>
+let Text = 'Hi! I am M.Jamal.Khan';
+let SpeedinMS = 50;
+let i = 0;
+const TextWriter = () =>{
+  if (i < Text.length) {
+    document.querySelector("#welcome-section h1").textContent += Text.charAt(i);
+    i++;
+    setTimeout(TextWriter, SpeedinMS);
+  }
+}
+window.addEventListener('DOMContentLoaded', ()=>{
+    setTimeout(TextWriter, 2000);    
+});
+    </script>
+</body>
+</html>

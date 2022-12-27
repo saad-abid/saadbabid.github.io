@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", "Segoe UI", "Tahoma";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: aliceblue;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+#projects-wrap {
+  max-width: 1280px;
+  margin: auto;
+}
+
+#projects-wrap > h2 {
+  padding-top: 100px;
+}
+#welcome-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  opacity: 0;
+  animation: fadein 1.5s ease-out 0.75s forwards;
+  white-space: nowrap;
+  transform: translateX(-100%);
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  min-height: 90vh;
+}
+nav {
+  width: 100%;
+}
+#navbar {
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  background-color: black;
+  color: white;
+  z-index: 5;
+}
+#navbar code {
+  font-size: 16px;
+}
+
+#navbar li a {
+  color: inherit;
+  padding: 20px;
+  display: inline-block;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: whitesmoke;
+  color: black;
+  cursor: pointer;
+}
+
+.project-tile {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 5px 5px 3px rgb(0, 0, 0, 0.2);
+  height: max-content;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  height: 516px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.project-title {
+  padding: 10px;
+}
+
+.proj-img {
+  background-color: bisque;
+  width: 100%;
+  height: 350px;
+  /* object-fit: cover; */
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border: none;
+}
+#contact-us {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+#contact-us-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+}
+.contact-link {
+  margin: 20px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  #projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  #projects {
+    grid-template-columns: 1fr;
+  }
+}
